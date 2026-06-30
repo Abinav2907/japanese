@@ -127,7 +127,7 @@ const POS = {
   4: { l: 69, p: 10 },
   5: { l: 71, p: 55 },
   6: { l: 78, p: 32 },
-  final: { l: 48, p: 72 }
+  final: { l: 48, p: 12 }
 };
 
 const STAMP_CLR = {
