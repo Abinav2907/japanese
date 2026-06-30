@@ -445,6 +445,9 @@ function runStep(i) {
   const e = TOUR[i];
   S.step = e.step;
   moveSensei(e.step);
+  if (e.step === 'final' && S.found.size === 6) {
+    unlockBox();
+  }
   setTimeout(() => {
     showBubble(e.key);
     if (e.auto > 0) {
