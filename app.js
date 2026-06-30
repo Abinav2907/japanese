@@ -344,7 +344,7 @@ function hideBubble() {
 }
 
 const TOUR = [
-  { step: 'intro', key: 'guideIntro', auto: 3400 },
+  { step: 'intro', key: 'guideIntro', auto: 0 },
   { step: 1, key: 'guide1', auto: 0 },
   { step: 2, key: 'guide2', auto: 0 },
   { step: 3, key: 'guide3', auto: 0 },

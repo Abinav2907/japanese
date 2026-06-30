@@ -376,16 +376,17 @@ img { display: block; max-width: 100%; }
 /* Door frame & panels */
 .door-stage {
   position: absolute;
-  bottom: 0;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 12px;
   width: 100%;
-  max-width: 320px;
-  padding: 0 16px;
+  max-width: 340px;
+  padding: 0 20px;
 }
 .door-title-wrap {
   width: 100%;
@@ -1398,11 +1399,12 @@ img { display: block; max-width: 100%; }
   box-shadow: 0 8px 32px rgba(0,0,0,0.7);
   user-select: none;
   touch-action: none;
+  background: #0a0510;
 }
-.ba-side { position: absolute; top: 0; bottom: 0; }
-.ba-cartoon { left: 0; right: 0; z-index: 1; }
-.ba-original { left: 0; right: 0; z-index: 2; clip-path: inset(0 0 0 50%); }
-.ba-img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+.ba-side { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+.ba-cartoon { z-index: 1; }
+.ba-original { z-index: 2; clip-path: inset(0 0 0 50%); }
+.ba-img { width: 100%; height: 100%; object-fit: contain; display: block; pointer-events: none; background: #0a0510; }
 
 /* Custom cartoon image loaded directly - no artificial filter needed */
 #ba-art {
