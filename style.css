@@ -3,6 +3,15 @@
    Mobile-first, warm Japanese aesthetic
 ═══════════════════════════════════════════════════ */
 
+@keyframes shake {
+  0%,100%{ transform:translateX(0); }
+  20%    { transform:translateX(-6px); }
+  40%    { transform:translateX(6px); }
+  60%    { transform:translateX(-4px); }
+  80%    { transform:translateX(4px); }
+}
+.shake { animation: shake 0.45s ease !important; }
+
 /* ── Custom Properties ── */
 :root {
   --c-sky-deep:    #0d0620;
@@ -1032,6 +1041,7 @@ img { display: block; max-width: 100%; }
   border: 2px solid #6a1010;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4), inset 0 2px 6px rgba(255,80,80,0.15);
 }
+.obj-cushion { position: relative; }
 .zabuton-trim {
   position: absolute;
   top: 4px; left: 6px; right: 6px; bottom: 4px;
@@ -1107,6 +1117,7 @@ img { display: block; max-width: 100%; }
   bottom: 0;
   left: 48%;
   transform: translateX(-50%);
+  transition: left 0.85s cubic-bezier(0.4, 0, 0.2, 1), bottom 0.85s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
