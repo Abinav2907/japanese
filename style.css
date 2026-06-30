@@ -387,15 +387,43 @@ img { display: block; max-width: 100%; }
   max-width: 320px;
   padding: 0 16px;
 }
+.door-title-wrap {
+  text-align: center;
+  margin-bottom: 8px;
+  animation: card-in 1.2s ease both;
+}
+.door-title {
+  font-family: var(--f-jp);
+  font-size: clamp(18px, 5.5vw, 24px);
+  font-weight: 600;
+  color: #fff8e7;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 12px rgba(201,150,58,0.5), 0 2px 10px rgba(0,0,0,0.9);
+  line-height: 1.3;
+}
+.door-subtitle {
+  font-family: var(--f-jp);
+  font-size: clamp(10px, 3vw, 13px);
+  font-weight: 400;
+  color: var(--gold-l);
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.9);
+  opacity: 0.95;
+}
+@keyframes label-pulse {
+  0%   { opacity: 0.75; transform: translateY(0); }
+  100% { opacity: 1; transform: translateY(-3px); }
+}
 .door-label {
   font-family: var(--f-jp);
-  font-size: 14px;
-  color: var(--text-l);
+  font-size: 13px;
+  color: rgba(240,226,191,0.9);
   text-align: center;
   letter-spacing: 0.05em;
   line-height: 1.6;
   text-shadow: 0 2px 10px rgba(0,0,0,0.85), 0 0 20px rgba(201,150,58,0.25);
-  animation: card-in 1.5s ease 0.3s both;
+  animation: card-in 1.5s ease 0.3s both, label-pulse 1.8s ease-in-out infinite alternate;
 }
 .door-outer {
   position: relative;
@@ -404,6 +432,11 @@ img { display: block; max-width: 100%; }
   border-radius: 4px 4px 0 0;
   padding: 9px 8px 0;
   box-shadow: var(--sh-deep), 0 0 50px rgba(150,60,0,0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.door-outer:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sh-deep), 0 0 50px rgba(201,150,58,0.22);
 }
 .door-bar {
   position: absolute;
@@ -420,6 +453,13 @@ img { display: block; max-width: 100%; }
   display: flex;
   cursor: pointer;
   overflow: hidden;
+  transition: filter 0.25s ease;
+}
+.fusuma:hover .panel {
+  filter: brightness(1.1);
+}
+.fusuma:active {
+  transform: scale(0.99);
 }
 .warm-ray {
   position: absolute;
